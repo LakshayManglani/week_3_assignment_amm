@@ -25,4 +25,13 @@ pub mod week_3_assignment_amm {
         ctx.accounts
             .init(seed, fee, treasury_fee, authority, ctx.bumps)
     }
+
+    pub fn deposit(
+        ctx: Context<Deposit>,
+        amount_x: u64,
+        amount_y: u64,
+        min_lp_out: u64,
+    ) -> Result<()> {
+        ctx.accounts.deposit(amount_x, amount_y, min_lp_out)
+    }
 }

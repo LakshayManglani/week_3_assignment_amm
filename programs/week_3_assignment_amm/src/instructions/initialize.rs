@@ -23,7 +23,7 @@ pub struct Initialize<'info> {
         init,
         payer = initializer,
         space = 8 + PoolConfig::INIT_SPACE,
-        seeds = [POLL_CONFIG_SEED, seed.to_le_bytes().as_ref()],
+        seeds = [POOL_CONFIG_SEED, seed.to_le_bytes().as_ref()],
         bump,
     )]
     pub pool_config: Account<'info, PoolConfig>,
