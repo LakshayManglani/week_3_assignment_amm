@@ -15,11 +15,14 @@ declare_id!("BQfVWzeuCF5NmDpz5Xfj2715UPnnq9sDNmCwcnieG42j");
 pub mod week_3_assignment_amm {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        crate::instructions::initialize::handle_initialize(ctx)
-    }
-
-    pub fn increment(ctx: Context<Increment>) -> Result<()> {
-        crate::instructions::increment::handle_increment(ctx)
+    pub fn initialize(
+        ctx: Context<Initialize>,
+        seed: u64,
+        fee: u8,
+        treasury_fee: u8,
+        authority: Option<Pubkey>,
+    ) -> Result<()> {
+        ctx.accounts
+            .init(seed, fee, treasury_fee, authority, ctx.bumps)
     }
 }
