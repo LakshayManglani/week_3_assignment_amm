@@ -4,7 +4,7 @@ use anchor_spl::associated_token::AssociatedToken;
 use anchor_spl::token::{self, Mint, Token, TokenAccount, Transfer};
 
 #[derive(Accounts)]
-#[instruction(is_x: bool)]
+#[instruction(is_x: bool, amount_in: u64, min_amount_out: u64)]
 pub struct Swap<'info> {
     pub token_program: Program<'info, Token>,
     pub associated_token_program: Program<'info, AssociatedToken>,

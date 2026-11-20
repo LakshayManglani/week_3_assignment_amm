@@ -7,7 +7,7 @@ use anchor_spl::{
 use crate::{constants::*, state::PoolConfig};
 
 #[derive(Accounts)]
-#[instruction(seed: u64)]
+#[instruction(seed: u64, fee: u8, treasury_fee: u8, authority: Option<Pubkey>)]
 pub struct Initialize<'info> {
     pub system_program: Program<'info, System>,
     pub token_program: Program<'info, Token>,

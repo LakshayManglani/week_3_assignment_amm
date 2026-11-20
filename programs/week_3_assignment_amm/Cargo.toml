@@ -3,7 +3,7 @@ name = "week_3_assignment_amm"
 version = "0.1.0"
 description = "Created with Anchor"
 edition.workspace = true
-rust-version.workspace = true
+# rust-version.workspace = true
 
 [lib]
 crate-type = ["cdylib", "lib"]
@@ -27,11 +27,13 @@ constant-product-curve = { git = "https://github.com/deanmlittle/constant-produc
 
 [dev-dependencies]
 # Cargo.lock pins LiteSVM's Rust-1.89-compatible dependency graph.
-litesvm = "0.15.0"
+litesvm = "0.18.2"
 solana-message = "4"
 solana-transaction = "4"
 solana-signer = "3"
 solana-keypair = "3"
+solana-account = "4"
+solana-pubkey = "4"
 
 
 [lints.rust]
