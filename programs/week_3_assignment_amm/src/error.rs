@@ -13,4 +13,13 @@ pub enum AmmError {
 
     #[msg("Curve calculation error")]
     CurveError,
+
+    #[msg("Curve calculation error")]
+    InvalidTreasuryAccount,
+
+    #[msg("Curve calculation error")]
+    MathOverflow,
+
+    #[msg("Curve calculation error")]
+    ZeroLiquidity,
 }

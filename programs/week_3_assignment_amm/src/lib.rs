@@ -34,4 +34,8 @@ pub mod week_3_assignment_amm {
     ) -> Result<()> {
         ctx.accounts.deposit(amount_x, amount_y, min_lp_out)
     }
+
+    pub fn swap(ctx: Context<Swap>, is_x: bool, amount_in: u64, min_amount_out: u64) -> Result<()> {
+        ctx.accounts.swap(is_x, amount_in, min_amount_out)
+    }
 }
