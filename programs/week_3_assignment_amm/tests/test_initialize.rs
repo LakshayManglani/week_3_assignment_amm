@@ -264,9 +264,9 @@ fn test_deposit() {
     let deposit_ix = Instruction::new_with_bytes(
         program_id,
         &week_3_assignment_amm::instruction::Deposit {
-            amount_x: deposit_amount,
-            amount_y: deposit_amount,
-            min_lp_out: deposit_amount,
+            amount: deposit_amount,
+            max_x: deposit_amount,
+            max_y: deposit_amount,
         }
         .data(),
         week_3_assignment_amm::accounts::Deposit {
@@ -367,9 +367,9 @@ fn test_swap() {
     let deposit_ix = Instruction::new_with_bytes(
         program_id,
         &week_3_assignment_amm::instruction::Deposit {
-            amount_x: 10_000_000,
-            amount_y: 10_000_000,
-            min_lp_out: 10_000_000,
+            amount: 10_000_000,
+            max_x: 10_000_000,
+            max_y: 10_000_000,
         }
         .data(),
         week_3_assignment_amm::accounts::Deposit {
@@ -503,9 +503,9 @@ fn test_withdraw() {
     let deposit_ix = Instruction::new_with_bytes(
         program_id,
         &week_3_assignment_amm::instruction::Deposit {
-            amount_x: 10_000_000,
-            amount_y: 10_000_000,
-            min_lp_out: 10_000_000,
+            amount: 10_000_000,
+            max_x: 10_000_000,
+            max_y: 10_000_000,
         }
         .data(),
         week_3_assignment_amm::accounts::Deposit {

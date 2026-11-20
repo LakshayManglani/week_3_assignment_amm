@@ -14,12 +14,12 @@ pub enum AmmError {
     #[msg("Curve calculation error")]
     CurveError,
 
-    #[msg("Curve calculation error")]
+    #[msg("Invalid treasury account")]
     InvalidTreasuryAccount,
 
-    #[msg("Curve calculation error")]
+    #[msg("Math calculation overflow")]
     MathOverflow,
 
-    #[msg("Curve calculation error")]
+    #[msg("Pool has zero liquidity")]
     ZeroLiquidity,
 }

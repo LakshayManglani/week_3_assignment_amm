@@ -28,11 +28,11 @@ pub mod week_3_assignment_amm {
 
     pub fn deposit(
         ctx: Context<Deposit>,
-        amount_x: u64,
-        amount_y: u64,
-        min_lp_out: u64,
+        amount: u64,
+        max_x: u64,
+        max_y: u64,
     ) -> Result<()> {
-        ctx.accounts.deposit(amount_x, amount_y, min_lp_out)
+        ctx.accounts.deposit(amount, max_x, max_y)
     }
 
     pub fn swap(ctx: Context<Swap>, is_x: bool, amount_in: u64, min_amount_out: u64) -> Result<()> {
